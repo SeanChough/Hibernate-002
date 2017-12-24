@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-24 12:13:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Students" table="STUDENTS">
+        <id name="sid" type="int">
+            <column name="SID" />
+            <!-- 自动生成的主键生成策略是assigned -->
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="gender" type="java.lang.String">
+            <column name="GENDER" />
+        </property>
+        <!-- Hibernate映射类型：date -->
+        <property name="birthday" type="date">
+            <column name="BIRTHDAY" />
+        </property>
+        <!-- 这是自动生成的，但是测试时出现了错误 
+        <many-to-one name="address" class="Address" fetch="join">
+            <column name="ADDRESS" />
+        </many-to-one>
+         -->
+         <!-- 手动添【加组件属性】 -->
+         <component name="address" class="Address">
+         	<property name="postcode" column="POSTCODE"></property>
+         	<property name="phone" column="PHONE"></property>
+         	<property name="address" column="ADDRESS"></property>
+         </component>
+         <!-- 二进制数据类型，例如图片、视频、音频 -->
+        <property name="picture" type="java.sql.Blob">
+            <column name="PICTURE" />
+        </property>
+    </class>
+</hibernate-mapping>

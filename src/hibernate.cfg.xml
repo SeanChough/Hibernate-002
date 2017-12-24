@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<!-- 数据库连接的主要设置 -->
+    	<property name="connection.username">scott</property>
+    	<property name="connection.password">tiger</property>
+    	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<property name="connection.url">jdbc:mysql://127.0.0.1:3306/hibernate?useUnicode=true&amp;
+    		characterEncoding=UTF-8</property>
+    	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    	
+    	<!-- 其他的 -->
+    	<property name="show_sql">true</property>
+    	<property name="format_sql">true</property>
+    	<!-- 也许会经常在update和create之间来回切换 -->
+    	<property name="hbm2ddl.auto">update</property>
+    	
+    	<!-- 将对象关系映射文件添加进来 -->
+    	<mapping resource="Students.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
