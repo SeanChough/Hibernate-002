@@ -69,7 +69,7 @@ public class StudentsTest {
 		address.setPostcode("235433");
 		address.setPhone("13456789078");
 		address.setAddress("上海市闵行区");
-		s.setAddress(address);
+		s.setAddress(address);//这里对应的是后来的Address类型的address属性
 		
 		//若不使用事务，设置session的自动提交模式
 		//生成Work实现类的匿名实例对象
@@ -98,7 +98,7 @@ public class StudentsTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		s.setAddress("上海市闵行区");
+		s.setAddress("上海市闵行区");//这里对应的是最开始的时候String类型的address属性
 		/*
 		 * 下面要准备写入Blob对象类型
 		 */

@@ -8,6 +8,8 @@ public class Students {
 	private String name;
 	private String gender;
 	private Date birthday;
+	//最开始的时候address并非组件属性，而是String类型的
+//	private String address;
 	//组件属性，Address类的对象
 	private Address address;
 	//二进制数据类型
@@ -59,6 +61,14 @@ public class Students {
 		this.birthday = birthday;
 	}
 
+	/*public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}*/
+	
 	public Address getAddress() {
 		return address;
 	}

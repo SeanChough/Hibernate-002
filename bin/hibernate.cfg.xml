@@ -15,10 +15,11 @@
     	<!-- 其他的 -->
     	<property name="show_sql">true</property>
     	<property name="format_sql">true</property>
-    	<!-- 也许会经常在update和create之间来回切换 -->
+    	<!-- 也许会经常在update和create之间来回切换：对表的操作是重新创建还是只更新 -->
     	<property name="hbm2ddl.auto">update</property>
     	
-    	<!-- 将对象关系映射文件添加进来 -->
+    	<!-- 将对象关系映射文件添加进来；这里并没有把Address.hbm.xml也添加进来 -->
     	<mapping resource="Students.hbm.xml"/>
     </session-factory>
+    <!-- Attention:当前打开的工程Hibernate-002是位于G盘Others文件夹下Github仓库中的工程，非D盘Workspace中的 -->
 </hibernate-configuration>
